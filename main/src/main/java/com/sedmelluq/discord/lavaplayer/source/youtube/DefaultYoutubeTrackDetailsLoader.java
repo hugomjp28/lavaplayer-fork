@@ -49,7 +49,7 @@ public class DefaultYoutubeTrackDetailsLoader implements YoutubeTrackDetailsLoad
 
     try {
       YoutubeTrackJsonData initialData = loadBaseResponse(mainInfo, httpInterface, videoId, sourceManager);
-
+      Thread.sleep(1000);
       if (initialData == null) {
         return null;
       }

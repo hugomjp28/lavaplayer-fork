@@ -13,6 +13,7 @@ allprojects {
     mavenCentral()
     maven(url = "https://m2.dv8tion.net/releases")
     maven(url = "https://jitpack.io")
+    maven(url = "https://maven.lavalink.dev/releases")
   }
 
   apply(plugin = "java")
@@ -21,6 +22,11 @@ allprojects {
   java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+  }
+
+  dependencies {
+    // Replace VERSION with the current version as shown by the Releases tab or a long commit hash `-SNAPSHOT` for snapshots.
+    implementation("dev.lavalink.youtube:v2:1.1.0")
   }
 
   publishing {
